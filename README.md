@@ -1,45 +1,15 @@
-# Rails 7 Starter
+# Human Skills
 
-This is a starter app for Rails 7. It includes:
+## 🚧 under construction 🚧
 
-- ESBuild
-- Sass
-- Devise
-- RSpec
-- Capybara
-- FactoryBot
-- Faker
-- Rubocop
+## about
 
-## Getting Started
+This is a Ruby on Rails application that will allow users to create a profile and add skills to their profile. Users can also search for other users by skill and location.
 
-To get started, clone the repo and then install the needed gems:
+Super admin users will be able to add, edit, and delete skills and other information from the database.
 
-```sh
-$ bundle install
-$ rails db:create && rails db:migrate
-```
 
-### Devise [[docs]](https://github.com/heartcombo/devise#getting-started)
+### ideas/features
 
-Install Devise:
-
-```sh
-$ rails generate devise:install
-```
-
-## Tests
-
-To run the tests:
-
-First, install RSpec:
-
-```sh
-$ rails generate rspec:install
-```
-
-Then run tests with:
-
-```sh
-$ rspec
-```
+- allow users to add a skill to their profile that they want to learn and then find other users who have that skill and are willing to teach it.
+-

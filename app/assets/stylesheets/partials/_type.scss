@@ -1,5 +1,9 @@
 @import 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap';
 
+html {
+  font-size: 16px;
+}
+
 body, button, input, select, textarea {
   font-family: Inter, sans-serif;
 }
@@ -10,15 +14,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 2em;
+  font-size: clamp(1.95em, 2.15em + 1.75vw, 3.6em);
+  font-weight: 700;
+  color: $off-white;
+  text-align: center;
 }
 
 h2 {
   font-size: 1.5em;
+  font-weight: 700;
 }
 
 h3 {
   font-size: 1.17em;
+  font-weight: 500;
 }
 
 h4 {
@@ -36,6 +45,7 @@ h6 {
 p {
   font-size: 1em;
   line-height: 1.6;
+  color: $off-white;
 }
 
 button, input, select, textarea {

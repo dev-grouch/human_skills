@@ -1,7 +1,14 @@
-<footer class="footer container">
-  <div class="links">
-    <%= link_to "Log in", sign_in_path %>
-    <%= link_to "Sign up", sign_up_path %>
+<footer class="footer container container--full">
+  <div class="footer__logo">
+    <%= link_to image_tag("logo.svg", alt: "Human Skills"), root_path %>
+  </div>
+  <div class="footer__links">
+    <% if user_signed_in? %>
+      <%= link_to "Log out", sign_out_path %>
+    <% else %>
+      <%= link_to "Log in", sign_in_path %>
+      <%= link_to "Sign up", sign_up_path %>
+    <% end %>
     <% unless current_page?(about_path) %>
       <%= link_to "About", about_path %>
     <% end %>

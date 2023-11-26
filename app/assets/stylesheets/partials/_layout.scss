@@ -1,0 +1,154 @@
+html {
+  background-color: $slate;
+}
+
+.content-wrapper {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .pages.index & {
+    @include hands-bg;
+  }
+
+  .pages.about & {
+    @include sparkle-bg;
+  }
+}
+
+.header {
+  padding: 1.25em 0 3em;
+
+  @include small-up {
+    padding: 4em 0 2em;
+  }
+
+  h1 {
+    .highlight {
+      color: $light-yellow;
+    }
+  }
+}
+
+.container {
+  margin: 0 auto;
+  padding: 2em;
+  width: 100%;
+  max-width: $max-container-width;
+
+  @include small-up {
+    padding: 2em 4em;
+  }
+
+  > .container {
+    padding: 2em 0;
+  }
+
+  &--constrain {
+    max-width: $max-container-content-width;
+  }
+
+  &--full {
+    max-width: 100%;
+  }
+}
+
+.supertool {
+  &__input {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    padding: .65em;
+    font-size: 1.2em;
+    font-weight: 500;
+
+    &::placeholder {
+      color: transparent;
+    }
+  }
+
+  @include small-up {
+    padding: 2em;
+
+    &__input {
+      padding: 1em;
+      font-size: 1.5em;
+      font-weight: 500;
+
+      &::placeholder {
+        color: $medium-gray;
+      }
+    }
+  }
+}
+
+.instructions {
+    display: block;
+    margin: 0 auto;
+    font-size: 1.15em;
+    font-weight: 500;
+    text-align: center;
+    color: $off-white;
+
+    @include small-up {
+      display: none;
+    }
+}
+
+.footer {
+  position: relative;
+  z-index: 1;
+  background-color: $dark-blue;
+  padding-top: 4em;
+  padding-bottom: 4em;
+
+  @include small-up {
+    padding-top: 7em;
+    padding-bottom: 7em;
+  }
+
+  &__logo {
+    display: block;
+    margin: 0 auto 4em;
+    max-width: 900px;
+
+    @include small-up {
+      margin-bottom: 7em;
+    }
+
+    a {
+      display: block;
+    }
+
+    img {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+
+    @include small-up {
+      flex-direction: row;
+      gap: 3em;
+    }
+
+    a {
+      color: $light-yellow;
+      text-decoration: none;
+      font-size: 1.2em;
+      font-weight: 500;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

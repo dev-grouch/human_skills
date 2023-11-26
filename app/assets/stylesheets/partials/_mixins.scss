@@ -1,0 +1,63 @@
+@mixin hands-bg {
+  &::after {
+    --width: 56vw;
+    --aspect-ratio: 0.7493;
+
+    display: block;
+    position: absolute;
+    left: -1.5vw;
+    bottom: 6vw;
+    width: var(--width);
+    height: calc(var(--width) * var(--aspect-ratio));
+    opacity: 0.4;
+    content: "";
+    background: left bottom no-repeat url('hands.png');
+    background-size: contain;
+    z-index: -1;
+
+    @include small-up {
+      --width: 69vw;
+
+      left: -1.5vw;
+      bottom: 6vw;
+    }
+
+    @include large-up {
+      --width: 50vw;
+
+      left: -2vw;
+      bottom: 2vw;}
+  }
+}
+
+@mixin sparkle-bg {
+  &::after {
+    --width: 56vw;
+    --aspect-ratio: 0.7493;
+
+    display: block;
+    position: absolute;
+    right: -1.5vw;
+    bottom: 25vw;
+    width: var(--width);
+    height: calc(var(--width) * var(--aspect-ratio));
+    opacity: 0.4;
+    content: "";
+    background: right bottom no-repeat url('sparkle.png');
+    background-size: contain;
+    z-index: -1;
+
+    @include small-up {
+      --width: 69vw;
+
+      right: -1.5vw;
+      bottom: 6vw;
+    }
+
+    @include large-up {
+      --width: 50vw;
+
+      right: -2vw;
+      bottom: 2vw;}
+  }
+}

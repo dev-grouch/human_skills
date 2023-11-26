@@ -1,0 +1,23 @@
+$small-breakpoint: 560px;
+$medium-breakpoint: 768px;
+$large-breakpoint: 1024px;
+$max-container-width: 1280px;
+$max-container-content-width: 800px;
+
+@mixin small-up {
+  @media (min-width: $small-breakpoint) {
+    @content;
+  }
+}
+
+@mixin medium-up {
+  @media (min-width: $medium-breakpoint) {
+    @content;
+  }
+}
+
+@mixin large-up {
+  @media (min-width: $large-breakpoint) {
+    @content;
+  }
+}
