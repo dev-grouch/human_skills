@@ -1,0 +1,7 @@
+Lint/EmptyBlock:
+  Exclude:
+    - 'lib/tasks/**/*'
+Lint/MissingSuper:
+  Exclude:
+    - 'spec/**/*'
+    - 'app/components/**/*'

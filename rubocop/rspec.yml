@@ -1,0 +1,31 @@
+RSpec/AggregateExamples:
+  Enabled: true
+  AddAggregateFailuresMetadata: true
+
+RSpec/Capybara/FeatureMethods:
+  Enabled: true
+  EnabledMethods:
+    - 'scenario'
+    - 'feature'
+
+RSpec/ContextWording:
+  Enabled: false
+
+RSpec/ExampleLength:
+  Enabled: false
+
+RSpec/FactoryBot:
+  Include:
+    - spec/factories/**/*.rb
+
+FactoryBot/ConsistentParenthesesStyle:
+  EnforcedStyle: require_parentheses
+
+FactoryBot/CreateList:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Enabled: false
+
+RSpec/Rails/InferredSpecType:
+  Enabled: false

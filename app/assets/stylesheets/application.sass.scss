@@ -1,0 +1,18 @@
+@import 'partials/reset';
+@import "https://rsms.me/inter/inter.css";
+
+:root {
+  font-family: Inter, sans-serif;
+  font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+}
+
+@supports (font-variation-settings: normal) {
+  :root { font-family: InterVariable, sans-serif; }
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #fff;
+}

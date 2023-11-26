@@ -1,0 +1,27 @@
+require:
+  - rubocop-capybara
+  - rubocop-performance
+  - rubocop-rspec
+  - rubocop-rails
+  - rubocop-thread_safety
+  - test_prof/rubocop
+
+inherit_from:
+  - node_modules/@prettier/plugin-ruby/rubocop.yml
+  - ./rubocop/layout.yml
+  - ./rubocop/lint.yml
+  - ./rubocop/metrics.yml
+  - ./rubocop/rails.yml
+  - ./rubocop/rspec.yml
+  - ./rubocop/style.yml
+
+AllCops:
+  NewCops: enable
+  TargetRubyVersion: 3.2
+  Exclude:
+    - db/**/*
+    - bin/**/*
+    - vendor/**/*
+    - node_modules/**/*
+    - config/initializers/devise.rb
+    - Gemfile

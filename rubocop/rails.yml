@@ -1,0 +1,8 @@
+Rails/FilePath:
+  Enabled: false
+Rails/DynamicFindBy:
+  Exclude:
+    - 'spec/support/**/*.rb'
+
+Rails/HasManyOrHasOneDependent:
+  Enabled: false

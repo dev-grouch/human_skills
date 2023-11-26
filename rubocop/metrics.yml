@@ -1,0 +1,23 @@
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
+    - Gemfile
+    - 'config/environments/**/*'
+    - 'config/routes.rb'
+
+Metrics/ClassLength:
+  CountAsOne: ['array', 'heredoc', 'method_call', 'hash']
+
+Metrics/ModuleLength:
+  Exclude:
+    - 'spec/**/*'
+
+Metrics/MethodLength:
+  CountAsOne: ['array', 'heredoc', 'method_call', 'hash']
+  Exclude:
+    - 'db/**/*'
+    - 'lib/tasks/**/*'
+
+Metrics/ParameterLists:
+  Exclude:
+    - 'app/form_builders/**/*'

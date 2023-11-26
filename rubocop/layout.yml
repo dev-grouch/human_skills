@@ -1,0 +1,30 @@
+Layout/ArgumentAlignment:
+  EnforcedStyle: with_fixed_indentation
+
+Layout/ArrayAlignment:
+  EnforcedStyle: with_fixed_indentation
+
+Layout/FirstArrayElementIndentation:
+  EnforcedStyle: consistent
+
+Layout/HashAlignment:
+  Enabled: true
+
+Layout/LineLength:
+  Max: 100
+  Severity: refactor
+
+Layout/MultilineArrayBraceLayout:
+  EnforcedStyle: new_line
+
+Layout/MultilineHashKeyLineBreaks:
+  Enabled: true
+
+Layout/MultilineMethodArgumentLineBreaks:
+  Enabled: true
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
+Layout/ParameterAlignment:
+  EnforcedStyle: with_fixed_indentation
