@@ -12,4 +12,29 @@ Super admin users will be able to add, edit, and delete skills and other informa
 ### ideas/features
 
 - allow users to add a skill to their profile that they want to learn and then find other users who have that skill and are willing to teach it.
--
+
+
+## Getting Started
+
+To get started, clone the repo and cd into the new folder. Then install the needed deps:
+
+```sh
+$ bundle install
+$ rails db:create && rails db:migrate
+$ yarn install
+```
+
+Then start the app in a local server:
+
+```sh
+$ bin/dev
+```
+
+
+## Specs
+
+Run tests with:
+
+```sh
+$ rspec
+```

@@ -1,0 +1,11 @@
+<div class="form-feedback">
+  <% if alert %>
+    <h2>Errors</h2>
+    <ul class="form-feedback__list">
+      <li><%= alert %></li>
+    </ul>
+  <% end %>
+  <% if notice %>
+    <h2 class="notice"><%= notice %></h2>
+  <% end %>
+</div>

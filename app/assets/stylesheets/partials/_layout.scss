@@ -2,6 +2,10 @@ html {
   background-color: $slate;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .content-wrapper {
   min-height: 90vh;
   display: flex;
@@ -59,9 +63,6 @@ html {
     display: block;
     margin: 0 auto;
     width: 100%;
-    padding: .65em;
-    font-size: 1.2em;
-    font-weight: 500;
 
     &::placeholder {
       color: transparent;
@@ -83,19 +84,6 @@ html {
   }
 }
 
-.instructions {
-    display: block;
-    margin: 0 auto;
-    font-size: 1.15em;
-    font-weight: 500;
-    text-align: center;
-    color: $off-white;
-
-    @include small-up {
-      display: none;
-    }
-}
-
 .footer {
   position: relative;
   z-index: 1;
@@ -110,7 +98,7 @@ html {
 
   &__logo {
     display: block;
-    margin: 0 auto 4em;
+    margin: 0 auto 2em;
     max-width: 900px;
 
     @include small-up {
@@ -128,27 +116,9 @@ html {
     }
   }
 
-  &__links {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5em;
-
-    @include small-up {
-      flex-direction: row;
-      gap: 3em;
-    }
-
+  & &__links {
     a {
-      color: $light-yellow;
-      text-decoration: none;
       font-size: 1.2em;
-      font-weight: 500;
-
-      &:hover {
-        text-decoration: underline;
-      }
     }
   }
 }

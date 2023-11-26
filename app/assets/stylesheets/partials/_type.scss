@@ -51,3 +51,49 @@ p {
 button, input, select, textarea {
   font-size: 1em;
 }
+
+.instructions {
+  display: block;
+  margin: 0 auto;
+  font-size: 1.15em;
+  font-weight: 500;
+  text-align: center;
+  color: $off-white;
+
+  @include small-up {
+    display: none;
+  }
+}
+
+
+.links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5em;
+  margin: 2em auto 0;
+
+  @include small-up {
+    flex-direction: row;
+    gap: 3em;
+  }
+
+  a {
+    color: $light-yellow;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 500;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &--column {
+    @include small-up {
+      flex-direction: column;
+      gap: 1.75em;
+    }
+  }
+}
