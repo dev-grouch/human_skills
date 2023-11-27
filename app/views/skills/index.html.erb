@@ -1,17 +1,16 @@
 <div class="container">
-  <%= render 'feedback' %>
   <header class="header">
     <h1>Skills</h1>
+    <%= render 'feedback' %>
   </header>
   <div class="container container--constrain">
-    <div id="skills">
-      <% @skills.each do |skill| %>
-        <%= render skill %>
-        <p>
-          <%= link_to "Show this skill", skill %>
-        </p>
-      <% end %>
+    <div class="skills__container">
+      <div class="skills__list" id="skills">
+        <% @skills.each do |skill| %>
+          <%= render skill %>
+        <% end %>
+      </div>
+      <%= render 'form', skill: @skill || Skill.new %>
     </div>
-    <%= link_to "New skill", new_skill_path %>
   </div>
 </div>

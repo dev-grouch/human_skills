@@ -76,9 +76,18 @@ form {
     border: 0 none;
     height: 2.25rem;
 
+    &--small {
+      height: 2.2em;
+    }
+
     @include small-up {
       font-size: 1.2em;
-      height: 3.5rem;
+      height: 3.5em;
+
+      &--small {
+        height: 2.2em;
+        font-size: 1.1em;
+      }
     }
 
     &::placeholder {
@@ -141,8 +150,9 @@ form {
 }
 
 .button {
-  display: block;
+  display: inline-block;
   height: 3.5rem;
+  line-height: 2.8em;
   text-align: center;
   background-color: $light-blue;
   color: $off-white;
@@ -162,6 +172,24 @@ form {
 
     &:hover {
       background-color: color.adjust($danger, $lightness: -10%);
+    }
+  }
+
+  &--small {
+    line-height: 1.8em;
+    height: 2em;
+    padding: 0 1em;
+  }
+
+  &--secondary {
+    border: 2px solid $off-white;
+    background-color: transparent;
+    color: $off-white;
+
+    &:hover {
+      border-color: $light-yellow;
+      background-color: transparent;
+      color: $light-yellow;
     }
   }
 }

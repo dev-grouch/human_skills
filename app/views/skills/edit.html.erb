@@ -1,9 +1,8 @@
 <h1>Editing skill</h1>
-
-<%= render "form", skill: @skill %>
-
+<%= turbo_frame_tag dom_id(@skill) do %>
+  <%= render "form", skill: @skill %>
+<% end %>
 <br>
-
 <div>
   <%= link_to "Show this skill", @skill %> |
   <%= link_to "Back to skills", skills_path %>

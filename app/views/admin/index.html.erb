@@ -1,3 +1,12 @@
 <div class="container" data-controller="admin">
-  <h1>Admin Index</h1>
+  <header class="header">
+    <h1>Admin Index</h1>
+    <%= render 'feedback' %>
+  </header>
+  <div class="container container--constrain">
+    <div class="links">
+      <%= link_to "Skills", skills_path, class: "button button--small" %>
+      <%= link_to "Edit User Account", edit_user_registration_path, class: "button button--small" %>
+    </div>
+  </div>
 </div>

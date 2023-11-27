@@ -1,3 +1,6 @@
-<div id="<%= dom_id skill %>">
-  <%= skill.name %>
-</div>
+<%= turbo_frame_tag dom_id(skill), class: "skills__skill" do %>
+  <p class="skill__name"><%= skill.name %></p>
+  <div class="skill__action">
+    <%= link_to "edit", skill, class: 'button button--small button--secondary' %>
+  </div>
+<% end %>

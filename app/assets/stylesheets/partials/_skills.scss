@@ -1,0 +1,41 @@
+.skills {
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4em;
+  }
+
+  &__list {
+    display: grid;
+    height: fit-content;
+    gap: 0;
+    padding: 1.4em 0 0;
+
+    form {
+      display: grid;
+      grid-template-columns: 1fr auto;
+    }
+
+    .field__label {
+      display: none;
+    }
+  }
+
+  &__skill {
+    display: grid;
+    height: fit-content;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    padding: 1em 0;
+    border-bottom: 1px solid $light-blue;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    .skill__name {
+      font-size: 1.2em;
+      font-weight: 500;
+    }
+  }
+}
