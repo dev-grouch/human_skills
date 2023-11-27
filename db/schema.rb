@@ -10,9 +10,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_11_26_023746) do
+ActiveRecord::Schema[7.0].define(version: 2023_11_27_180310) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "profiles", force: :cascade do |t|
+    t.string "name"
+    t.string "link"
+    t.text "bio"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_profiles_on_user_id"
+  end
+
+  create_table "profiles_skills", id: false, force: :cascade do |t|
+    t.bigint "profile_id", null: false
+    t.bigint "skill_id", null: false
+    t.index ["profile_id", "skill_id"], name: "index_profiles_skills_on_profile_id_and_skill_id"
+    t.index ["skill_id", "profile_id"], name: "index_profiles_skills_on_skill_id_and_profile_id"
+  end
+
+  create_table "skills", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_skills_on_name", unique: true
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -26,4 +50,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_26_023746) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "profiles", "users"
 end
