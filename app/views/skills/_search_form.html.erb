@@ -1,0 +1,15 @@
+<%= form_with(url: skills_path,
+  method: :get,
+  class: "skills__search-form",
+  data: {
+    turbo_frame: "skills__list",
+    skills_target: "searchForm"
+  }) do |form| %>
+  <div class="field field--text">
+    <%= form.label :query, class: "field__label" %>
+    <%= form.text_field :query %>
+  </div>
+  <div>
+    <%= form.submit "Search", class: "button button--small" %>
+  </div>
+<% end %>

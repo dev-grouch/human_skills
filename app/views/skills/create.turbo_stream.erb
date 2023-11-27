@@ -1,6 +1,6 @@
 <% if @skill.errors.any? %>
-  <%= turbo_stream.replace "skills_form", partial: "form", locals: { skill: @skill } %>
+  <%= turbo_stream.replace "skills__form", partial: "form", locals: { skill: @skill } %>
 <% else %>
-  <%= turbo_stream.prepend "skills", partial: "skill", locals: { skill: @skill } %>
-  <%= turbo_stream.replace "skills_form", partial: "form", locals: { skill: Skill.new } %>
+  <%= turbo_stream.replace "skills__form", partial: "form", locals: { skill: Skill.new } %>
+  <%= turbo_stream.replace "skills__list", partial: "skills_list", locals: { skills: @skills } %>
 <% end %>

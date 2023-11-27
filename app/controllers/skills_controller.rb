@@ -1,11 +1,13 @@
 class SkillsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_skill, only: %i[ show edit update destroy ]
+  before_action :set_skills, only: %i[ index create ]
 
   def index
-    if params[:query].present?
-      @skills = Skill.where("name ILIKE ?", "%#{params[:query]}%")
+    if turbo_frame_request?
+      render partial: "skills/skills_list", locals: { skills: @skills }
     else
-      @skills = Skill.all
+      render :index
     end
   end
 
@@ -57,6 +59,14 @@ class SkillsController < ApplicationController
   private
     def set_skill
       @skill = Skill.find(params[:id])
+    end
+
+    def set_skills
+      if params[:query].present?
+        @skills = Skill.where("name ILIKE ?", "%#{params[:query]}%").order(:updated_at)
+      else
+        @skills = Skill.order(:name)
+      end
     end
 
     def skill_params

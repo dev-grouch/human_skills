@@ -1,15 +1,11 @@
-<div class="container">
+<div class="container" data-controller="skills">
   <header class="header">
     <h1>Skills</h1>
     <%= render 'feedback' %>
   </header>
   <div class="container container--constrain">
     <div class="skills__container">
-      <div class="skills__list" id="skills">
-        <% @skills.each do |skill| %>
-          <%= render skill %>
-        <% end %>
-      </div>
+      <%= render 'skills_list', skills: @skills %>
       <%= render 'form', skill: @skill || Skill.new %>
     </div>
   </div>
