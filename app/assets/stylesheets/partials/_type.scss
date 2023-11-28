@@ -4,11 +4,20 @@ html {
   font-size: 16px;
 }
 
-body, button, input, select, textarea {
+body,
+button,
+input,
+select,
+textarea {
   font-family: Inter, sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: Inter, sans-serif;
   font-weight: 600;
 }
@@ -35,11 +44,11 @@ h4 {
 }
 
 h5 {
-  font-size: .83em;
+  font-size: 0.83em;
 }
 
 h6 {
-  font-size: .67em;
+  font-size: 0.67em;
 }
 
 p {
@@ -48,7 +57,10 @@ p {
   color: $off-white;
 }
 
-button, input, select, textarea {
+button,
+input,
+select,
+textarea {
   font-size: 1em;
 }
 
@@ -65,7 +77,6 @@ button, input, select, textarea {
   }
 }
 
-
 .links {
   display: flex;
   flex-direction: column;
@@ -73,6 +84,10 @@ button, input, select, textarea {
   align-items: center;
   gap: 1.5em;
   margin: 2em auto 0;
+
+  .container > &:first-child:last-child {
+    margin: 0 auto;
+  }
 
   @include small-up {
     flex-direction: row;

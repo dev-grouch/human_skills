@@ -11,32 +11,32 @@ form {
 }
 
 .form-feedback {
- h2 {
-   font-size: 1.5em;
-   font-weight: 600;
-   color: $off-white;
+  h2 {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: $off-white;
 
-  &.notice {
-    background-color: $light-yellow;
-    color: $slate;
-    padding: 0.3em 0.5em;
-    margin: 0 auto 2em;
-    width: max-content;
+    &.notice {
+      background-color: $light-yellow;
+      color: $slate;
+      padding: 0.3em 0.5em;
+      margin: 0 auto 2em;
+      width: max-content;
+    }
   }
- }
 
- .form-feedback__list {
-   list-style: disc;
-   margin: 1em;
-   padding-left: 2em;
+  .form-feedback__list {
+    list-style: disc;
+    margin: 1em;
+    padding-left: 2em;
 
-   li {
-     font-size: 1.2em;
-     font-weight: 500;
-     background-color: red;
-     color: $off-white;
-   }
- }
+    li {
+      font-size: 1.2em;
+      font-weight: 500;
+      background-color: red;
+      color: $off-white;
+    }
+  }
 }
 
 .field {
@@ -49,10 +49,10 @@ form {
     cursor: pointer;
 
     + i {
-      font-size: .8em;
+      font-size: 0.8em;
       color: $off-white;
       display: block;
-      margin: .3em 0 .5em;
+      margin: 0.3em 0 0.5em;
     }
 
     @include small-up {
@@ -61,7 +61,7 @@ form {
       display: inline;
 
       + i {
-        font-size: .9em;
+        font-size: 0.9em;
       }
     }
   }
@@ -72,7 +72,7 @@ form {
     color: $slate;
     background-color: $off-white;
     width: 100%;
-    padding: .65em;
+    padding: 0.65em;
     border: 0 none;
     height: 2.25rem;
 
@@ -108,10 +108,10 @@ form {
 
     & + .field__guidance {
       display: block;
-      font-size: .75em;
+      font-size: 0.75em;
       font-style: normal;
       color: $light-yellow;
-      margin-top: .5em;
+      margin-top: 0.5em;
     }
 
     &--checkbox {
@@ -132,7 +132,7 @@ form {
           left: 0.25rem;
           width: 0.5rem;
           height: 0.5rem;
-          content: "";
+          content: '';
           background-color: $dark-blue;
         }
       }
@@ -141,9 +141,19 @@ form {
         span {
           display: inline-block;
           color: $off-white;
-          font-size: .65em;
-          transform: translateY(-.2em);
+          font-size: 0.65em;
+          transform: translateY(-0.2em);
         }
+      }
+    }
+
+    &--multiselect {
+      height: auto;
+      min-height: 4.25rem;
+      overflow-y: auto;
+
+      @include small-up {
+        font-size: 1.2em;
       }
     }
   }
@@ -202,7 +212,7 @@ form {
   &::before {
     position: relative;
     top: -4em;
-    content: "";
+    content: '';
     display: block;
     height: 0;
     width: 10em;

@@ -1,0 +1,10 @@
+<h1>Editing profile</h1>
+<div class="container container--constrain">
+  <%= render "form", profile: @profile %>
+</div>
+<div class="container container--constrain">
+  <div class="links">
+    <%= link_to "Show this profile", @profile %> |
+    <%= link_to "Back to profiles", profiles_path %>
+  </div>
+</div>

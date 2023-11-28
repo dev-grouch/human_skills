@@ -14,4 +14,5 @@ Rails.application.routes.draw do
 
   resources :admin, only: [:index]
   resources :skills
+  resources :profiles
 end
