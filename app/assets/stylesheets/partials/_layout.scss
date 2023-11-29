@@ -10,7 +10,7 @@ body {
   min-height: 90vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
 
   .pages.index & {
     @include hands-bg;

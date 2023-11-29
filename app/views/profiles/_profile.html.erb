@@ -1,4 +1,17 @@
 <div class="profile" id="<%= dom_id profile %>">
-  <p class="profile__name"><%= profile.name %></p>
-  <p class="profile__show-link"><%= link_to "Show this profile", profile, class: "button button--small" %></p>
+  <h3 class="profile__name"><%= profile.name %></h3>
+  <div class="profile__link">
+    <p><strong>link:</strong> <%= profile.link %></p>
+  </div>
+  <div class="profile__bio">
+    <p><strong>bio:</strong> <%= profile.bio %></p>
+  </div>
+  <div class="profile__skills">
+    <% if profile.skills.any? %>
+      <p><strong>Skills:</strong>
+        <% profile.skills.each do |skill| %>
+          <span class="profile__skill"><%= skill.name %></span>
+        <% end %></p>
+    <% end %>
+  </div>
 </div>

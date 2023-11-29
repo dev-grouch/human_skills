@@ -4,13 +4,11 @@
 </header>
 <div class="container container--constrain">
   <div class="links">
-    <%= link_to "New profile", new_profile_path %>
+    <%= link_to "New profile", new_profile_path, class: "button" %>
   </div>
-</div>
-<div class="container container--constrain">
-  <div class="profiles">
+  <div class="profiles-list">
     <% @profiles.each do |profile| %>
-      <%= render profile %>
+      <%= render 'profile_list_item', profile: profile %>
     <% end %>
   </div>
 </div>
