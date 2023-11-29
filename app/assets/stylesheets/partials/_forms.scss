@@ -162,7 +162,7 @@ form {
 .button {
   display: inline-block;
   height: 3.5rem;
-  line-height: 2.8em;
+  line-height: 3.5em;
   text-align: center;
   background-color: $light-blue;
   color: $off-white;
@@ -171,6 +171,10 @@ form {
   padding: 0 2em;
   font-size: 1.2em;
   font-weight: 500;
+
+  &[type='submit'] {
+    line-height: 2.8em;
+  }
 
   &:hover {
     color: $slate;
@@ -186,12 +190,17 @@ form {
   }
 
   &--small {
-    line-height: 1.8em;
+    line-height: 2em;
     height: 2em;
     padding: 0 1em;
+
+    &[type='submit'] {
+      line-height: 1.6em;
+    }
   }
 
   &--secondary {
+    line-height: 1.85em;
     border: 2px solid $off-white;
     background-color: transparent;
     color: $off-white;

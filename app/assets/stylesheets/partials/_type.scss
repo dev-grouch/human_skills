@@ -57,6 +57,10 @@ p {
   color: $off-white;
 }
 
+strong {
+  font-weight: 600;
+}
+
 button,
 input,
 select,
@@ -83,11 +87,7 @@ textarea {
   justify-content: center;
   align-items: center;
   gap: 1.5em;
-  margin: 2em auto 0;
-
-  .container > &:first-child:last-child {
-    margin: 0 auto;
-  }
+  margin: 0 auto;
 
   @include small-up {
     flex-direction: row;
