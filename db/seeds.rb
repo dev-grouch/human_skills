@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
+# Create some basic Skills
 Skill.create(name: "Ruby")
 Skill.create(name: "Ruby on Rails")
 Skill.create(name: "HTML")
@@ -52,3 +53,21 @@ Skill.create(name: "Adobe InDesign")
 Skill.create(name: "Adobe After Effects")
 Skill.create(name: "Adobe Premiere Pro")
 Skill.create(name: "Adobe Lightroom")
+
+
+# create some basic Profiles using Faker
+200.times do
+  Profile.create(
+    name: FFaker::Name.name,
+    bio: FFaker::Lorem.paragraph,
+    link: FFaker::Internet.http_url,
+    skill_ids: Skill.all.sample(rand(3..17)).map(&:id)
+  )
+end
+
+# create a basic User
+User.create(
+  email: "steve@grouch.dev",
+  password: "password",
+  password_confirmation: "password"
+)

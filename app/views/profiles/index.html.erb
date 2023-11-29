@@ -6,6 +6,7 @@
   <div class="links">
     <%= link_to t('links.new_profile'), new_profile_path, class: "button" %>
   </div>
+  <%# TODO: add pagination %>
   <div class="profiles-list">
     <% @profiles.each do |profile| %>
       <%= render 'profile_list_item', profile: profile %>
