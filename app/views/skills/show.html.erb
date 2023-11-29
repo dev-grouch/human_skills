@@ -1,0 +1,9 @@
+<p style="color: green"><%= notice %></p>
+<%= turbo_frame_tag dom_id(@skill) do %>
+  <%= render "edit_form", skill: @skill %>
+<% end %>
+<div>
+  <%= link_to "Edit this skill", edit_skill_path(@skill) %> |
+  <%= link_to "Back to skills", skills_path %>
+  <%= button_to "Destroy this skill", @skill, method: :delete %>
+</div>

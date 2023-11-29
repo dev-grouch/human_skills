@@ -13,4 +13,6 @@ Rails.application.routes.draw do
   get "/about", to: "pages#about"
 
   resources :admin, only: [:index]
+  resources :skills
+  resources :profiles
 end

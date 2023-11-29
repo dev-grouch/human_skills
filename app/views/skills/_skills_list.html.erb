@@ -1,0 +1,5 @@
+<%= turbo_frame_tag "skills__list", class: "skills__list" do %>
+  <% skills.each do |skill| %>
+    <%= render skill %>
+  <% end %>
+<% end %>

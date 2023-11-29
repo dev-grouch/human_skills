@@ -4,11 +4,14 @@
 
 import { application } from "./application"
 
-import HomeController from "./home_controller"
-application.register("home", HomeController)
-
 import AboutController from "./about_controller"
 application.register("about", AboutController)
 
 import AdminController from "./admin_controller"
 application.register("admin", AdminController)
+
+import HomeController from "./home_controller"
+application.register("home", HomeController)
+
+import SkillsController from "./skills_controller"
+application.register("skills", SkillsController)

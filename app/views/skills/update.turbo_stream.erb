@@ -1,0 +1,6 @@
+<% if @skill.errors.any? %>
+  <% puts @skill.errors %>
+  <%= turbo_stream.update "skills__edit-form_#{dom_id(@skill)}", partial: "edit_form", locals: { skill: @skill } %>
+<% else %>
+  <%= turbo_stream.replace dom_id(@skill), partial: "skill", locals: { skill: @skill } %>
+<% end %>
