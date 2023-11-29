@@ -27,7 +27,7 @@ class SkillsController < ApplicationController
 
     respond_to do |format|
       if @skill.save
-        format.html { redirect_to skill_url(@skill), notice: "Skill was successfully created." }
+        format.html { redirect_to skill_url(@skill), notice: t('.create.success') }
       else
         format.html { render :new, status: :unprocessable_entity }
       end
@@ -39,7 +39,7 @@ class SkillsController < ApplicationController
   def update
     respond_to do |format|
       if @skill.update(skill_params)
-        format.html { redirect_to skill_url(@skill), notice: "Skill was successfully updated." }
+        format.html { redirect_to skill_url(@skill), notice: t('.update.success') }
       else
         format.html { render :edit, status: :unprocessable_entity }
       end

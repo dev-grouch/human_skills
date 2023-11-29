@@ -1,0 +1,7 @@
+en:
+  create:
+    success: 'Skill was successfully created.'
+  update:
+    success: 'Skill was successfully updated.'
+  destroy:
+    success: 'Skill was successfully destroyed.'
