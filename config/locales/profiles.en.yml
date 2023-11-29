@@ -1,0 +1,9 @@
+en:
+  links:
+    new_profile: 'New Profile'
+  create:
+    success: 'Profile was successfully created.'
+  update:
+    success: 'Profile was successfully updated.'
+  destroy:
+    success: 'Profile was successfully destroyed.'

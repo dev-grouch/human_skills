@@ -23,7 +23,7 @@ class ProfilesController < ApplicationController
     respond_to do |format|
       if @profile.save
         format.html do
- redirect_to profile_url(@profile), notice: "Profile was successfully created." end
+ redirect_to profile_url(@profile), notice: t('.create.success') end
       else
         format.html { render :new, status: :unprocessable_entity }
       end
@@ -34,7 +34,7 @@ class ProfilesController < ApplicationController
     respond_to do |format|
       if @profile.update(profile_params)
         format.html do
- redirect_to profile_url(@profile), notice: "Profile was successfully updated." end
+ redirect_to profile_url(@profile), notice: t('.create.success') end
       else
         format.html { render :edit, status: :unprocessable_entity }
       end
@@ -46,7 +46,7 @@ class ProfilesController < ApplicationController
 
     respond_to do |format|
       format.html do
-        redirect_to profiles_url, notice: "Profile was successfully destroyed."
+        redirect_to profiles_url, notice: t('.destroy.success')
       end
     end
   end

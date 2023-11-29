@@ -4,17 +4,17 @@
   </div>
   <div class="links footer__links">
     <% if user_signed_in? %>
-      <%= link_to "Log out", sign_out_path %>
-      <%= link_to "Admin", admin_index_path %>
+      <%= link_to t('nav_links.log_out'), sign_out_path %>
+      <%= link_to t('nav_links.admin'), admin_index_path %>
     <% else %>
-      <% unless current_page?(sign_in_path) %><%= link_to "Log in", sign_in_path %><% end %>
-      <% unless current_page?(sign_up_path) %><%= link_to "Sign up", sign_up_path %><% end %>
+      <% unless current_page?(sign_in_path) %><%= link_to t('nav_links.log_in'), sign_in_path %><% end %>
+      <% unless current_page?(sign_up_path) %><%= link_to t('nav_links.sign_up'), sign_up_path %><% end %>
     <% end %>
     <% unless current_page?(about_path) %>
-      <%= link_to "About", about_path %>
+      <%= link_to t('nav_links.about'), about_path %>
     <% end %>
     <% unless current_page?(root_path) %>
-      <%= link_to "Home", root_path %>
+      <%= link_to t('nav_links.home'), root_path %>
     <% end %>
   </div>
 </footer>
